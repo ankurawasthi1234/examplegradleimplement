@@ -1,4 +1,4 @@
-package com.example.ankur.gradleimplementexample;
+package com.example.gimexample;
 
 import android.app.Activity;
 import android.support.v7.app.AlertDialog;
@@ -7,17 +7,15 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+public class MyTestActivity extends AppCompatActivity {
     Button sumbit ;
     Activity activity;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_my_test);
         setpopup(this);
-
     }
-
 
     public void setpopup(Activity activity){
         activity = this;
@@ -26,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 AlertDialog.Builder builder =
-                        new AlertDialog.Builder(MainActivity.this, R.style.AppCompatAlertDialogStyle);
+                        new AlertDialog.Builder(MyTestActivity.this, R.style.AppCompatAlertDialogStyle);
                 builder.setTitle("Dialog");
                 builder.setCancelable(false);
                 builder.setMessage("THANK YOU ....");
@@ -34,11 +32,5 @@ public class MainActivity extends AppCompatActivity {
                 builder.show();
             }
         });
-    }
-
-
-    public int getViewid(){
-      int id = R.layout.activity_main;
-        return id;
     }
 }
